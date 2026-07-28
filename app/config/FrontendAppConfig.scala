@@ -36,7 +36,7 @@ class FrontendAppConfig @Inject() (configuration: Configuration) {
   val ottCommodityUrl: String    = configuration.get[String]("urls.ott-commodity")
 
   private val exitSurveyBaseUrl: String = configuration.get[Service]("microservice.services.feedback-frontend").baseUrl
-  val exitSurveyUrl: String             = s"$exitSurveyBaseUrl/feedback/trader-goods-profiles-frontend"
+  val exitSurveyUrl: String             = s"$exitSurveyBaseUrl/feedback/trader-goods-profiles-frontend?useServiceNavigation"
 
   val dataStoreBaseUrl: Service = configuration.get[Service]("microservice.services.trader-goods-profiles-data-store")
   val customsEmailUrl: Service  = configuration.get[Service]("microservice.services.customs-email-frontend")
